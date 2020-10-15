@@ -1,7 +1,12 @@
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+HELP.md
+MANIFEST.in
 README.md
 setup.py
 ctrl4bi/__init__.py
 ctrl4bi/cleanser.py
+ctrl4bi/datasets.py
 ctrl4bi/etl_testing.py
 ctrl4bi/exceptions.py
 ctrl4bi.egg-info/PKG-INFO

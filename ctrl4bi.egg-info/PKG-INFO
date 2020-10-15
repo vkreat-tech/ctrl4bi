@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: ctrl4bi
-Version: 1.0.0
+Version: 1.0.1
 Summary: A helper package for Business Intelligence solutions
 Home-page: https://github.com/vkreat-tech/ctrl4bi
 Author: Shaji James
@@ -10,6 +10,11 @@ Description: # Ctrl4BI
         [![Downloads](http://pepy.tech/badge/ctrl4bi)](http://pepy.tech/project/ctrl4bi)
         
         #### This is a helper package for Business Intelligence solutions.
+        
+        For documentation, please read [HELP.md](https://github.com/vkreat-tech/ctrl4bi/blob/master/HELP.md)
+        
+        For demo on usage, please check [README.ipynb](https://github.com/vkreat-tech/ctrl4bi/blob/master/README.ipynb)
+        
         
         #### Contact Developer: [Shaji](https://www.linkedin.com/in/shaji-james/)
         
