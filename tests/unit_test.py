@@ -10,3 +10,5 @@ tgt_df=pd.read_csv('sample_csv_2.csv')
 mismatch_count,logs,mismatch_df =etl_testing.column_level_check(src_df,tgt_df,'Identifier')
 print('\n'.join(logs))
 print(mismatch_df)
+
+print(help(etl_testing))

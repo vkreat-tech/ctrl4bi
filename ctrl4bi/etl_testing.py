@@ -1,15 +1,21 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Oct  7 15:54:31 2020
+Created on Tue May 12 00:00:00 2020
 
 @author: Shaji
 """
+
 from . import exceptions
 
 from datetime import datetime
 import os
 
 def column_level_check(source_df,target_df,primary_keys):
+    """
+    Usage: [arg1]:[Pandas DataFrame - source], [arg2]:[Pandas DataFrame - target], [arg3]:[Primary keys (separated by comma)]
+    Description: Performs column level testing between two DataFrames.
+    Returns: [Mismatch Count], [Test Log (list)], [Pandas dataframe - mismatch (if any)]
+    """
 
     global execution_status
 

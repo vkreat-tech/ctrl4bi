@@ -3,6 +3,11 @@
 
 #### This is a helper package for Business Intelligence solutions.
 
+For documentation, please read [HELP.md](https://github.com/vkreat-tech/ctrl4bi/blob/master/HELP.md)
+
+For demo on usage, please check [README.ipynb](https://github.com/vkreat-tech/ctrl4bi/blob/master/README.ipynb)
+
+
 #### Contact Developer: [Shaji](https://www.linkedin.com/in/shaji-james/)
 
 ## Highlights
