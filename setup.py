@@ -23,7 +23,7 @@ setuptools.setup(
     include_package_data=True,
     packages=setuptools.find_packages(),
     package_data={
-        "": ["*.txt", "*.gz"]
+        "": ["*.txt", "*.gz", "*.csv"]
     },
     install_requires=install_requires,
     classifiers=[
