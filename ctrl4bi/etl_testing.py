@@ -9,14 +9,14 @@ from . import exceptions
 
 from datetime import datetime
 import os
+import pandas as pd
 
 def column_level_check(source_df,target_df,primary_keys):
     """
     Usage: [arg1]:[Pandas DataFrame - source], [arg2]:[Pandas DataFrame - target], [arg3]:[Primary keys (separated by comma)]
-    Description: Performs column level testing between two DataFrames.
+    Description: Performs column level testing between two DataFrames by joining using the primary keys.
     Returns: [Mismatch Count], [Test Log (list)], [Pandas dataframe - mismatch (if any)]
     """
-
     global execution_status
 
     systime=datetime.now()
@@ -150,3 +150,48 @@ def column_level_check(source_df,target_df,primary_keys):
         print('Check Logs for the error message')
         raise exceptionsExecutionError
     return mismatch_count,log_list,un_df
+
+def sort_and_compare(source_df,target_df):
+    """
+    Usage: [arg1]:[Pandas DataFrame - source], [arg2]:[Pandas DataFrame - target]
+    Description: Sort and Compare two datasets.
+    Returns: [Mismatch Count], [Test Log (list)], [Pandas dataframe - mismatch (if any)]
+    """
+    log_list=[]
+    col1=source_df.columns
+    col2=target_df.columns
+    cols=list(set(col1.sort_values()).intersection(set(col2.sort_values())))
+    log_list.append('Common column(s): '+', '.join(cols))
+
+    source_df.sort_values(cols, axis=0, ascending=True, inplace=True)
+    target_df.sort_values(cols, axis=0, ascending=True, inplace=True)
+
+    data1=source_df[cols].reset_index(drop=True)
+    data2=target_df[cols].reset_index(drop=True)
+
+    data1.head()
+    data2.head()
+
+    result=data1==data2
+    bool_list=[]
+    mis_cols=[]
+    mis_index=[]
+    for i in cols:
+        if all(result[i])==True:
+            bool_list.append(True)
+        else:
+            bool_list.append(False)
+            mis_cols.append(i)
+            for j in range(len(result[i])):
+                if result[i][j]==False:
+                    mis_index.append(j)
+    un_df=pd.concat([data1.iloc[list(set(mis_index))],data2.iloc[list(set(mis_index))]],axis=1)
+
+    mismatch_count=0
+    if all(bool_list)==True:
+        log_list.append('Records are matching')
+    else:
+        mismatch_count=len(set(mis_index))
+        log_list.append(str(mismatch_count)+' records unmatched')
+        log_list.append('Column(s): '+', '.join(mis_cols))
+    return mismatch_count,log_list,un_df[mis_cols]

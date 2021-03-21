@@ -5,11 +5,14 @@ MANIFEST.in
 README.md
 setup.py
 ctrl4bi/__init__.py
+ctrl4bi/aws_connect.py
 ctrl4bi/cleanser.py
+ctrl4bi/data_wrangling.py
 ctrl4bi/datasets.py
 ctrl4bi/etl_testing.py
 ctrl4bi/exceptions.py
 ctrl4bi.egg-info/PKG-INFO
 ctrl4bi.egg-info/SOURCES.txt
 ctrl4bi.egg-info/dependency_links.txt
+ctrl4bi.egg-info/requires.txt
 ctrl4bi.egg-info/top_level.txt

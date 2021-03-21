@@ -11,14 +11,15 @@ For demo on usage, please check [README.ipynb](https://github.com/vkreat-tech/ct
 #### Contact Developer: [Shaji](https://www.linkedin.com/in/shaji-james/)
 
 ## Highlights
-- PII scrubbing
+- Connector for AWS S3 - Bulk Download Files/Directories in S3 Bucket
+- PII/PHI scrubbing - Removes occurrences of SSN / Driver License / Account Numbers etc from texts
 - ETL testing - Column Level Check
 
 ## Dependencies
 
 Ctrl4BI requires:
 
-* Python (tested under Python 3.8)
+* Python 3 (tested under Python 3.8)
 
 ## Installation
 
@@ -51,9 +52,11 @@ help(cleanser.scrub_pii)
 
 ## ChangeLog
 
-This is the first official release of the package
+- Sort and Compare two datasets (When joining is not possible)
+- Read VCF file
+- Connector for AWS S3
 
 ## ToDo
 
-- Data Wrangling
+- Connectors for various data sources
 - Relationalize Unstructured Data
