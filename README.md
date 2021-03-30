@@ -14,6 +14,7 @@ For demo on usage, please check [README.ipynb](https://github.com/vkreat-tech/ct
 - Connector for AWS S3 - Bulk Download Files/Directories in S3 Bucket
 - PII/PHI scrubbing - Removes occurrences of SSN / Driver License / Account Numbers etc from texts
 - ETL testing - Column Level Check
+- Parse JSON files
 
 ## Dependencies
 
@@ -53,7 +54,7 @@ help(cleanser.scrub_pii)
 ## ChangeLog
 
 - Sort and Compare two datasets (When joining is not possible)
-- Read VCF file
+- Flatten JSON & Dictionary
 - Connector for AWS S3
 
 ## ToDo

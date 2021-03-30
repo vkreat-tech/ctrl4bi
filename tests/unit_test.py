@@ -1,12 +1,11 @@
 from ctrl4bi import cleanser
 from ctrl4bi import etl_testing
 from ctrl4bi import datasets
+from ctrl4bi import data_wrangling
 
-str1='My DL is A1234567'
-print(cleanser.scrub_pii(str1))
+people = {1: {'name': 'John', 'age': '27', 'sex': 'Male'},
+          2: {'name': 'Marie', 'age': '22', 'sex': 'Female'},
+          3: {'name': 'Luna', 'age': '24', 'sex': 'Female', 'married': 'No'}}
 
-src_df,tgt_df=datasets.clc_samples(refresh=True)
-
-mismatch_count,logs,mismatch_df =etl_testing.sort_and_compare(src_df,tgt_df)
-print('\n'.join(logs))
-print(mismatch_df)
+people_flattened=data_wrangling.flatten_dict(people)
+print(people_flattened)

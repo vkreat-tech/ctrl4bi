@@ -6,10 +6,11 @@ Created on Tue Dec  8 12:18:10 2020
 """
 
 import pandas as pd
+import json
 
 def read_vcf(input_file,output_file=None):
     """
-    Usage: [arg1]:[Input File] [arg1]:[Output File - Optional Parameter (The return dataframe will be written to csv if output path is specified)]
+    Usage: [arg1]:[Input File] [arg2]:[Output File - Optional Parameter (The return dataframe will be written to csv if output path is specified)]
     Description: Reads the vcf file and returns the name, phone numbers and email as DataFrame
     Returns: [Dataframe of name, phone numbers and email]
     """
@@ -53,3 +54,36 @@ def read_vcf(input_file,output_file=None):
     if output_file:
         df.to_csv(output_file)
     return df
+
+
+def flatten_dict(y):
+    """
+    Usage: [arg1]:[Nested Dictionary]
+    Description: Flattens the dictionary, elements in List type with be give unique numbers
+    Returns: [Flat Dictionary]
+    """
+    out = {}
+    def flatten(x, name =''):
+        if type(x) is dict:
+            for a in x:
+                flatten(x[a], name + str(a) + '_')
+        elif type(x) is list:
+            i = 0
+            for a in x:
+                flatten(str(a), name + str(i) + '_')
+                i += 1
+        else:
+            out[name[:-1]] = x
+    flatten(y)
+    return out
+
+def flatten_json(json_str):
+    """
+    Usage: [arg1]:[Nested JSON string]
+    Description: Flattens the JSON, elements in JSON Array type with be give unique numbers
+    Returns: [Flat JSON string]
+    """
+    json_dict=json.loads(json_str)
+    flat_dict=flatten_dict(json_dict)
+    flat_json=json.dumps(flat_dict)
+    return flat_json

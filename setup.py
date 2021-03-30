@@ -13,7 +13,7 @@ if os.path.isfile(requirementPath):
 
 setuptools.setup(
     name="ctrl4bi",
-    version="1.0.3",
+    version="1.0.4",
     author="Shaji James",
     author_email="shajijames7@gmail.com",
     description="A helper package for Business Intelligence solutions",
