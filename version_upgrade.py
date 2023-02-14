@@ -1,5 +1,5 @@
-current_version = '1.0.4'
-new_version = '1.0.5'
+current_version = '1.0.5'
+new_version = '1.0.6'
 
 files = [r'README.md', r'setup.py', r'build.bat', r'deploy.bat']
 

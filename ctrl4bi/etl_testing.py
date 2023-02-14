@@ -162,6 +162,10 @@ def sort_and_compare(source_df,target_df):
     Description: Sort and Compare two datasets.
     Returns: [Mismatch Count], [Test Log (list)], [Pandas dataframe - mismatch (if any)]
     """
+    for col in source_df.columns:
+        source_df[col] = source_df[col].apply(lambda x:str(x).strip()).astype(str).fillna(str(0))
+    for col in target_df.columns:
+        target_df[col] = target_df[col].apply(lambda x:str(x).strip()).astype(str).fillna(str(0))
     log_list=[]
     col1=source_df.columns
     col2=target_df.columns

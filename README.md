@@ -7,7 +7,7 @@ For documentation, please read [HELP.md](https://github.com/vkreat-tech/ctrl4bi/
 
 For demo on usage, please check [README.ipynb](https://github.com/vkreat-tech/ctrl4bi/blob/master/README.ipynb)
 
-#### Lastest Version: 1.0.5
+#### Lastest Version: 1.0.6
 
 ## Highlights
 - Connector for AWS S3 - Bulk Download Files/Directories in S3 Bucket
