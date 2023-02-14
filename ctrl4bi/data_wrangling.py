@@ -1,8 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Dec  8 12:18:10 2020
+About Ctrl4BI
+    Open Source Project Developed by VKreaT (www.vkreat.com)
+    Ctrl4BI has automated methods to automate Business Intelligence solutions
 
-@author: Shaji
+About ctrl4bi.data_wrangling
+    The module has functions that has functions to parse data of multiple formats and convert them to relational format
+
+Last Updated On: 14 Feb 2023
 """
 
 import pandas as pd

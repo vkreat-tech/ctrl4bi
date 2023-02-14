@@ -1,8 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue May 12 00:00:00 2020
+About Ctrl4BI
+    Open Source Project Developed by VKreaT (www.vkreat.com)
+    Ctrl4BI has automated methods to automate Business Intelligence solutions
 
-@author: Shaji
+About ctrl4bi.datasets
+    The module has practice datasets which can used by unit tests or to practice different functionalities
+
+Last Updated On: 14 Feb 2023
 """
 
 import pandas as pd

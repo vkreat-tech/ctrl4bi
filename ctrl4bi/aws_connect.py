@@ -1,7 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue May 12 00:00:00 2020
-@author: Shaji
+About Ctrl4BI
+    Open Source Project Developed by VKreaT (www.vkreat.com)
+    Ctrl4BI has automated methods to automate Business Intelligence solutions
+
+About ctrl4bi.aws_connect
+    The module has functions to connect to AWS S3
+
+Last Updated On: 14 Feb 2023
 """
 
 import boto3

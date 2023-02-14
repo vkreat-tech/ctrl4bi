@@ -7,8 +7,7 @@ For documentation, please read [HELP.md](https://github.com/vkreat-tech/ctrl4bi/
 
 For demo on usage, please check [README.ipynb](https://github.com/vkreat-tech/ctrl4bi/blob/master/README.ipynb)
 
-
-#### Contact Developer: [Shaji](https://www.linkedin.com/in/shaji-james/)
+#### Lastest Version: 1.0.5
 
 ## Highlights
 - Connector for AWS S3 - Bulk Download Files/Directories in S3 Bucket
@@ -61,3 +60,7 @@ help(cleanser.scrub_pii)
 
 - Connectors for various data sources
 - Relationalize Unstructured Data
+
+## About Us
+#### Proprietary Code of [VKreaT](http://vkreat.com/)
+Project Owner: [Shaji James](https://www.linkedin.com/in/shaji-james/)

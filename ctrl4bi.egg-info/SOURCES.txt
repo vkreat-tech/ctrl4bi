@@ -1,8 +1,10 @@
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
 HELP.md
+LICENSE
 MANIFEST.in
 README.md
+pyproject.toml
 setup.py
 ctrl4bi/__init__.py
 ctrl4bi/aws_connect.py
